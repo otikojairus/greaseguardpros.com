@@ -1,0 +1,23 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="56" y1="48" x2="456" y2="456" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0E1824" />
+      <stop offset="1" stop-color="#071018" />
+    </linearGradient>
+    <linearGradient id="glow" x1="148" y1="114" x2="366" y2="386" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D8FF4F" />
+      <stop offset="1" stop-color="#FF9D4A" />
+    </linearGradient>
+    <linearGradient id="drop" x1="164" y1="106" x2="348" y2="362" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FBFF" />
+      <stop offset="1" stop-color="#9ED0F1" />
+    </linearGradient>
+  </defs>
+  <rect x="28" y="28" width="456" height="456" rx="112" fill="url(#bg)" />
+  <rect x="54" y="54" width="404" height="404" rx="92" stroke="url(#glow)" stroke-opacity="0.28" stroke-width="6" />
+  <path d="M256 104C224 154 176 220 176 284C176 354.4 222.8 406 256 406C289.2 406 336 354.4 336 284C336 220 288 154 256 104Z" fill="url(#drop)" />
+  <path d="M212 272C220.8 244.3 238.7 228 256 228C273.3 228 291.2 244.3 300 272" stroke="#071018" stroke-width="20" stroke-linecap="round" />
+  <path d="M158 352C188.8 324 218.2 310 256 310C293.8 310 323.2 324 354 352" stroke="url(#glow)" stroke-width="24" stroke-linecap="round" />
+  <path d="M126 186H162" stroke="#D8FF4F" stroke-width="16" stroke-linecap="round" />
+  <path d="M350 186H386" stroke="#FF9D4A" stroke-width="16" stroke-linecap="round" />
+</svg>
