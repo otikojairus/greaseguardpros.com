@@ -39,7 +39,7 @@ Allow: /
 User-Agent: Bingbot
 Allow: 
 
-Sitemap: http://localhost:3000/sitemap.xml
+Sitemap: https://greaseguardpros.com/sitemap.xml
 `;
 
 export function GET() {
