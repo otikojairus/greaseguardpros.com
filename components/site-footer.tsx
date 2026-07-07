@@ -1,9 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BLOG_POSTS, CITY_PAGES, PHONE_DISPLAY, PHONE_E164, SERVICE_HUBS, SITE_NAME, toPath, cityFromTargetArea } from "@/lib/site-data";
+import { BLOG_POSTS, CITY_PAGES, PHONE_DISPLAY, PHONE_E164, SERVICE_HUBS, SITE_NAME, cityFromTargetArea, toPath } from "@/lib/site-data";
 import { PhoneIcon } from "./icons";
 
 export function SiteFooter() {
+  const popularCities = CITY_PAGES.filter(
+    (page, index, allPages) =>
+      allPages.findIndex((candidate) => cityFromTargetArea(candidate.targetArea) === cityFromTargetArea(page.targetArea)) === index,
+  ).slice(0, 6);
+
   return (
     <footer className="pulse-footer">
       <div className="pulse-wrap pulse-footer-grid">
@@ -35,7 +40,7 @@ export function SiteFooter() {
         <div>
           <p className="pulse-footer-title">Popular Cities</p>
           <div className="pulse-col-links">
-            {CITY_PAGES.slice(0, 6).map((page) => (
+            {popularCities.map((page) => (
               <Link key={page.pageSlug} href={toPath(page.pageSlug)}>
                 {cityFromTargetArea(page.targetArea)}
               </Link>
